@@ -1,0 +1,31 @@
+baseline_value: float,
+accelerations: float,
+fetal_movement: float,
+uterine_contractions: float,
+light_decelerations: float,
+severe_decelerations: float,
+prolongued_decelerations: float,
+
+https://fastapi-renan.herokuapp.com/
+
+
+PRÁTICAS:
+PARTE 1 no slide 7
+- usar o modelo dentro da API
+-
+
+PARTE 2 slide 10
+- criar a pipeline de CI teste automatizado via arquivo .yml
+
+PARTE 3 slide 17 AUTOMAÇÂO
+- criar secrets no heroku (user>account settings>applications>create authorization)
+- setar deploy automático no heroku
+- setar secrets no github
+- (funcionou)
+- mostrar o problema que acontece, todo push que fazemos vai tentar subir uma versão, se for com erro, vai dar deploy no codigo com erro
+- fazer tudo antes de colocar a pasta .github/workflows
+- colocar o github/workflows
+
+
+
+python train_model.py --base_data_url https://github.com/renansantosmendes/ml_datasets --data_file_name fetal_health.csv  --tracking_uri https://dagshub.com/renansantosmendes/puc_lectures_mlops.mlflow --tracking_username renansantosmendes --tracking_password cc41cc48f8e489dd5b87404dd6f9720944e32e9b --registry_model_name model_from_lecture_02_mlops
