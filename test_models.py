@@ -4,7 +4,7 @@ from mlflow.tracking import MlflowClient
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from fastapi.testclient import TestClient
-from main import app
+from main_old import app
 
 mlflow_client = TestClient(app)
 
